@@ -23,7 +23,8 @@ export default async function(eleventyConfig) {
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig
 		.addPassthroughCopy({
-			"./public/": "/"
+			"./public/": "/",
+			"./content/images": "/content/images"
 		})
 		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
 
@@ -105,6 +106,7 @@ export default async function(eleventyConfig) {
 			animated: true,
 		},
 	});
+	
 
 	// Filters
 	eleventyConfig.addPlugin(pluginFilters);
@@ -164,5 +166,6 @@ export const config = {
 	// it will transform any absolute URLs in your HTML to include this
 	// folder name and does **not** affect where things go in the output folder.
 
-	// pathPrefix: "/",
+	InputPathToUrlTransformPluginInputPathToUrlTransformPluginpathPrefix: "/",
 };
+

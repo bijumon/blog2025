@@ -1,7 +1,7 @@
 /* Defaults */
 :root {
-	--font-family: -apple-system, system-ui, sans-serif;
-	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+	--font-family: "Fira Sans", -apple-system, system-ui, sans-serif;
+	--font-family-monospace: "Fira Code", "Fira Mono", Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
 /* Theme colors */
@@ -27,11 +27,11 @@
 		--color-gray-90: #dad8d8;
 
 		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
+		--text-color-link: #66d9ef;
+		--text-color-link-active: #ef7c66;
+		--text-color-link-visited: #17A2B7;
 
-		--background-color: #15202b;
+		--background-color: #272822;
 	}
 }
 
@@ -55,9 +55,6 @@ body {
 }
 html {
 	overflow-y: scroll;
-}
-body {
-	max-width: 40em;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -232,7 +229,6 @@ header {
 	counter-reset: start-from var(--postlist-index);
 	list-style: none;
 	padding: 0;
-	padding-left: 1.5rem;
 }
 .postlist-item {
 	display: flex;
@@ -241,16 +237,9 @@ header {
 	counter-increment: start-from -1;
 	margin-bottom: 1em;
 }
-.postlist-item:before {
-	display: inline-block;
-	pointer-events: none;
-	content: "" counter(start-from, decimal-leading-zero) ". ";
-	line-height: 100%;
-	text-align: right;
-	margin-left: -1.5rem;
-}
-.postlist-date,
-.postlist-item:before {
+
+/* .postlist-item:before, */
+.postlist-date {
 	font-size: 0.8125em; /* 13px /16 */
 	color: var(--color-gray-90);
 }
@@ -261,7 +250,6 @@ header {
 	font-size: 1.1875em; /* 19px /16 */
 	font-weight: 700;
 	flex-basis: calc(100% - 1.5rem);
-	padding-left: .25em;
 	padding-right: .5em;
 	text-underline-position: from-font;
 	text-underline-offset: 0;
@@ -296,3 +284,71 @@ header {
 	margin-right: 1em;
 }
 
+/* Base (mobile–tablet) */
+html {
+  font-size: 110%; /* 16px */
+  line-height: 1.5;
+}
+
+/* ≥ 800px */
+@media (min-width: 800px) {
+  html {
+    font-size: 120%; /* ~16.8px */
+    line-height: 1.55;
+  }
+  body { max-width: 40em; }
+}
+
+/* ≥ 960px */
+@media (min-width: 960px) {
+  html {
+    font-size: 130%; /* ~17.6px */
+    line-height: 1.6;
+  }
+  body { max-width: 43em; }
+}
+
+/* ≥ 1280px */
+@media (min-width: 1280px) {
+  html {
+    font-size: 140%; /* ~18.4px */
+    line-height: 1.65;
+  }
+  body { max-width: 47em; }
+}
+
+/* ≥ 1440px */
+@media (min-width: 1440px) {
+  html {
+    font-size: 150%; /* ~19.2px */
+    line-height: 1.7;
+  }
+  body { max-width: 50em; }
+}
+
+/* ≥ 1920px (2K) */
+@media (min-width: 1920px) {
+  html {
+    font-size: 160%; /* 20px */
+    line-height: 1.75;
+  }
+  body { max-width: 53.5em; }
+}
+
+/* ≥ 2560px (3K) */
+@media (min-width: 2560px) {
+  html {
+    font-size: 170%; /* ~20.8px */
+    line-height: 1.8;
+  }
+  body { max-width: 55em; }
+}
+
+/* ≥ 3840px (4K) */
+@media (min-width: 3840px) {
+  html {
+    font-size: 180%; /* ~22.4px */
+    line-height: 1.85;
+  }
+  body { max-width: 60em; }
+}

@@ -26,10 +26,25 @@
 
 		{#- Add the contents of a file to the bundle #}
 		<style>{% include "css/index.css" %}</style>
-
+		
 		{#- Or you can add from node_modules #}
 		{# <style>{% include "node_modules/something.css" %}</style> #}
+		
+		<style>
+		/* Light theme */
+		@media (prefers-color-scheme: light) {
+			{% include "css/prism-ghcolors.css" %}
+		}
 
+		/* Dark theme */
+		@media (prefers-color-scheme: dark) {
+			{% include "node_modules/prismjs/themes/prism-okaidia.css" %}
+		}
+		</style>
+
+		<style>{% include "css/prism-diff.css" %}</style>
+		<style>{% include "css/styles.local.css" %}</style>
+		
 		{#- Render the CSS bundle using inlined CSS (for the fastest site performance in production) #}
 		<style>{% getBundle "css" %}</style>
 
@@ -57,9 +72,7 @@
 		</header>
 
 		<main id="main">
-			<heading-anchors>
-				{{ content | safe }}
-			</heading-anchors>
+			{{ content | safe }}
 		</main>
 
 		<footer>
