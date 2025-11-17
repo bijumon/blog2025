@@ -1,6 +1,7 @@
-## user
-Explain frame based animation in the context of game dev in pygame-ce
-## assistant
+---
+title: ""
+draft: true
+---
 
 In the context of **game development using `pygame-ce` (pygame Community Edition)**, **frame-based animation** is a technique where **a sequence of images (frames)** is displayed in rapid succession to create the illusion of motion. This is one of the most common animation techniques in 2D games.
 

@@ -1,6 +1,7 @@
-## user
-in linux howto fix filename with spaces
-## assistant
+---
+title: ""
+draft: true
+---
 
 In Linux, filenames with spaces can cause issues when using the command line, as the shell interprets spaces as delimiters between arguments. Here are a few ways to handle or fix filenames with spaces:
 

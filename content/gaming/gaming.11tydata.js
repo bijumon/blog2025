@@ -1,6 +1,6 @@
 export default {
 	category: "gaming",
-	tags: [ "posts", "gaming" ],
+	tags: [ "gaming" ],
 	"layout": "layouts/post.njk",
 };
 

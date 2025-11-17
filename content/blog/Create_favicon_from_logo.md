@@ -1,6 +1,7 @@
-## user
-i have a square 1024px logo and i want to use it favicon
-## assistant
+---
+title: ""
+draft: true
+---
 
 Favicons are typically much smaller than 1024×1024, and they often need to be in **ICO** format (though PNG works for modern browsers). Here’s what you should do:
 

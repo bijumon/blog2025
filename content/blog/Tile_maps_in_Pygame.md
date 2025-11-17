@@ -1,6 +1,7 @@
-## user
-Tell me 10 things I should know about tile maps and tiled, use python and pygame snippets where necessary 
-## assistant
+---
+title: ""
+draft: true
+---
 
 Here are **10 important things you should know about tile maps and Tiled (the map editor), with Python/Pygame examples where useful**:
 

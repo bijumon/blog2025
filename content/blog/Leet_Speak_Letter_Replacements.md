@@ -1,6 +1,7 @@
-## user
-Which letters of the english alphabet are replaceable by numbers 
-## assistant
+---
+title: ""
+draft: true
+---
 
 In various forms of informal writing, especially in internet slang, "leet speak" (1337 speak), and stylized text (like passwords, gamertags, or graffiti art), certain **English letters are commonly replaced with similar-looking numbers**. Here are the most typical substitutions:
 

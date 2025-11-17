@@ -33,8 +33,11 @@ export default function(eleventyConfig) {
 		return Object.keys(target);
 	});
 
-	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-		return (tags || []).filter(tag => ["all", "posts"].indexOf(tag) === -1);
+	eleventyConfig.addFilter("filterTagList", function (tags, exclude = []) {
+  		const builtInExcludes = ["all", "posts", "category"];
+  		const finalExcludes = builtInExcludes.concat(exclude);
+
+  		return (tags || []).filter(tag => !finalExcludes.includes(tag));
 	});
 
 	eleventyConfig.addFilter("sortAlphabetically", strings =>

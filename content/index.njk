@@ -5,64 +5,38 @@ const eleventyNavigation = {
 };
 ---
 {% for tag in collections | getKeys | filterTagList | sortAlphabetically %}
-<a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>
+    {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+    <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>
 {% endfor %}
 
-{{ "
-# Rerumque discedere pedicis iuvenes
+/
 
-Lorem markdownum, tectis caelestibus rubentia sequitur; dedistis in solet
-relinquam rapi, manu meo repetita. Cladi hactenus arma, fundit licet veniat,
-infligitque mille puniceum Naxon.
+<a href="https://kernel.org/">Kernel Archives</a>
+<a href="https://nobaraproject.org/">Nobara Linux</a>
+<a href="https://www.chezmoi.io/user-guide/command-overview/">chezmoi dotfiles</a>
+<a href="https://starship.rs/presets/">Starship shell prompt</a>
+<a href="https://neovim.io/">Neovim</a>
 
-Habet super sum urbem *acumine soceri*, vacuus ira tenebo tinxit. Terra felix
-ordine cadebant exorabilis in qua artificem paries pericula ramaliaque fecit.
-Varias [disertum cornu iam](#rerumque-discedere-pedicis-iuvenes) liquidas mira
-figit protinus avorum, me curru occupat, hoc. Copia caruissem ocius? **Fuit
-bovis intercipe** temptant nostro ferioque sentit bracchia, illae Cyclopis ante
-omnia portus.
 
-Dimittit mille descendere quem [obvertit](#rerumque-discedere-pedicis-iuvenes),
-sistitur quae, sulcat. Ferox dictis vulnera, consensistis modo inmensi rictu hos
-et *deum factique*, ordine longo quae lugentis
-[furialibus](#rerumque-discedere-pedicis-iuvenes) semina fuerunt? Coniunx
-resoluta! Lege omni posset in vestem.
+{{ "" | markdown | safe }}
 
-1. Semiferos virgo
-2. Nulla pati Cinyra sitque aether pars naturae
-3. Tibi omnis illa generi
-4. Nudum matrem incaluere et aliter alienaque referam
+{% set list = [] %}
 
-Patriumque effugies Sidonide significat indoluit suum liquidas Cererisque,
-grates ea loco eandem et intellecta! *Premit avidum iam* stetit nec suus memorem
-dum uti, cum. Vim nec bella Lethaea, nec voluitque locus. Iuvenes doleam pedes,
-questa non.
+{# Build a filtered list manually — Nunjucks-compatible #}
+{% for p in collections.posts | reverse %}
+  {% if not p.data.draft %}
+    {% set list = list.concat([p]) %}
+  {% endif %}
+{% endfor %}
 
-Raptos `typeface` nunc tecum, tecta? Sinistro res.
-
-Negarent vi procul, poplite quam, conscia, iraeque arbor conposuit! Nubibus
-aequore neve *cannas manus* tum sed: sic vitae tu frondes modo, quaque iter. Cum
-orbem vitiis causa. Aevo amori, quotiens orbem contermina parabantur aderant.
-Tradita telo: fluit aret pharetras ne verba, qui misit iunctis nunc, ipsa.
-
-    if (digital_pack_network.crt_gigahertz_monochrome(desktop)) {
-        port_rfid_big = node(hostDtdIcf.gps(udp, srgbSupercomputerCross),
-                flashAtaBoot);
-        isa -= drive_camelcase_display;
-        minicomputerMenuCisc = 1;
-    }
-    barIn(1);
-    logScreenshot.header_asp_start -= software_operating_full;
-    var rayGraphicHorizontal = p(query.website_server.bmp(
-            modemPlain.wysiwyg_gate_ttl.meta_edutainment(handle_ruby),
-            swipeLossyVle));
-    windowsProgramRtf += -1 + 3 - throughputBalanceThermistor;
-
-Ille confundimur enim eicit possidet Ortygiam populum nidum. Subitus
-[Veneris](#rerumque-discedere-pedicis-iuvenes) manebat perque facit iuncta,
-oculis **haec ludos** promptum. **Sed curvatura** non Actaeo dant veneno sine
-coeamus fert parente fugiens fletumque rarissima telluris bicolor, fontis Somne.
-Carens nomen, fulgure habent poterat doleas terraeque siccis nomen sideraque,
-fas inmenso utile; non. Qua contempsere colunt **flumina**!
-
-" | markdown | safe }}
+{# Now show only first 10 #}
+<ul>
+{% for post in list | head(10) %}
+  <li>
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+    <time datetime="{{ post.date | htmlDateString }}">
+      / {{ post.date | readableDate("dd LLL yyyy") }}
+    </time>
+  </li>
+{% endfor %}
+</ul>

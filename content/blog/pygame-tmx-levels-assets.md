@@ -1,9 +1,9 @@
-## user
-I have assets directory with levels sir which contains tmx files, they depend on base tiled files in assets/tiled dir
- How to load these in python 
-## assistant
+---
+title: ""
+draft: true
+---
 
-Got it — you have a directory layout something like this:  
+you have a directory layout something like this:  
 
 ```
 assets/

@@ -1,6 +1,9 @@
-## user
-How can I improve this 
+---
+title: ""
+draft: true
+---
 
+``` shell
 $ printf "%s\n" $(groups) | sort | tr '\n' ',' | sed 's/.$//'
 audio,autologin,dialout,docker,lp,render,video,wheel
 
@@ -12,6 +15,7 @@ $ sudo useradd \
     --create-home \
     --no-user-group \
     newuser
+``` shell 
 
 # using short options
 $ sudo useradd -g users -G $groups -m -N newuser
