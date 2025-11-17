@@ -1,3 +1,8 @@
+---
+title: Poe2 Barbarian Build
+---
+---
+
 ## user
 in pillars 2 whats a good barbarian build in detail please
 ## assistant

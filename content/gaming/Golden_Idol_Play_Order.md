@@ -1,3 +1,8 @@
+---
+title: Golden Idol Play Order
+---
+---
+
 # Play order for golden idol series
 
 ### 🕷️ **1. The Case of the Golden Idol** — *DLCs (prequels)*

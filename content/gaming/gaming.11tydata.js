@@ -1,6 +1,5 @@
 export default {
-	tags: [
-		"posts"
-	],
+	tags: [ "posts", "gaming" ],
 	"layout": "layouts/post.njk",
 };
+

@@ -1,3 +1,8 @@
+---
+title: Post Thaos Defeat Outcome
+---
+---
+
 ## user
 in pillars of eternity what happens after you defeat thaos
 ## assistant

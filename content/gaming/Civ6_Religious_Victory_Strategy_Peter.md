@@ -1,3 +1,8 @@
+---
+title: Civ6 Religious Victory Strategy Peter
+---
+---
+
 ## user
 i want to win religious victory as peter, build Hagia Sophia wonder and the Theocracy Government. whats my strategy
 ## tool

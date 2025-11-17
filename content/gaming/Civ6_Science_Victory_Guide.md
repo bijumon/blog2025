@@ -1,3 +1,8 @@
+---
+title: Civ6 Science Victory Guide
+---
+---
+
 ## user
 how to win science victory with man on the moon achievement
 ## tool

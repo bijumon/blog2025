@@ -1,8 +1,14 @@
 <h1>Tags</h1>
 
-<ul>
 {% for tag in collections | getKeys | filterTagList | sortAlphabetically %}
 	{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a></li>
+	<p><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a></p>
+	<ul>
+	{% for item in collections[tag] | sort(attribute="data.title") %}
+	    <li><a href="{{ item.url }}">{{ item.data.title or item.fileSlug }}</a></li>
+		{% if item.data.description %}
+      	<div class="post-description">{{ item.data.description }}</div>
+    	{% endif %}
+	{% endfor %}
+	</ul>
 {% endfor %}
-</ul>

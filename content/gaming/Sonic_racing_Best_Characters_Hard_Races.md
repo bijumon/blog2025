@@ -1,3 +1,7 @@
+---
+title: Sonic Racing Best Characters Hard Races
+---
+
 ## user
 which char should i choose for sonic all-star racing transformed , in a hard race
 ## assistant

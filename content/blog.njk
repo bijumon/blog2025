@@ -5,14 +5,5 @@ const eleventyNavigation = {
 };
 ---
 
-<ul>
-{% for item in collections.all %}
-  {% if item.data.title %}
-    <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
-
-
 {% set postslist = collections.posts %}
 {% include "postslist.njk" %}

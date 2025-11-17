@@ -10,4 +10,12 @@ const numberOfLatestPostsToShow = 99;
 
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
+
+<ul>
+{% for item in collections.gaming %}
+	<li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+{% endfor %}
+</ul>
+
+
 {% include "postslist.njk" %}
