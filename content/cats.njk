@@ -1,0 +1,17 @@
+---js
+const eleventyNavigation = {
+	key: "Cats",
+	order: 3
+};
+---
+
+{% for cat in collections.category | getKeys | sortAlphabetically %}
+  {% set items = collections.category[cat] %}
+  <h2>{{ cat }}</h2>
+  <ul>
+    {% for item in items %}
+      <li><a href="{{ item.url }}">{{ item.data.title or item.fileSlug }}</a></li>
+      <div class="post-description">{{ item.data.description }}</div>
+    {% endfor %}
+  </ul>
+{% endfor %}

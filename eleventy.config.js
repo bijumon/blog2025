@@ -6,6 +6,8 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 import pluginFilters from "./_config/filters.js";
 
+import markdownIt from "markdown-it";
+
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
 	// Drafts, see also _data/eleventyDataSchema.js
@@ -52,6 +54,25 @@ export default async function(eleventyConfig) {
 		// Supported selectors: https://www.npmjs.com/package/posthtml-match-helper
 		bundleHtmlContentFromSelector: "script",
 	});
+
+	eleventyConfig.addCollection("category", function (collectionApi) {
+		// Gather all items that have a category
+		const items = collectionApi.getAll().filter(item => item.data.category);
+
+		const category = {};
+
+		for (const item of items) {
+			const cat = item.data.category;
+
+			if (!category[cat]) {
+			category[cat] = [];
+			}
+			category[cat].push(item);
+		}
+
+		return category;
+	});
+
 
 	// Official plugins
 	eleventyConfig.addPlugin(pluginSyntaxHighlight, {
@@ -128,6 +149,10 @@ export default async function(eleventyConfig) {
 	// https://www.11ty.dev/docs/copy/#emulate-passthrough-copy-during-serve
 
 	// eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+
+	const md = markdownIt({ html: true });
+	eleventyConfig.addFilter("markdown", content => md.render(content ?? ""));
+
 };
 
 export const config = {
@@ -142,7 +167,7 @@ export const config = {
 	],
 
 	// Pre-process *.md files with: (default: `liquid`)
-	markdownTemplateEngine: "njk",
+	 wnTemplateEngine: "njk",
 
 	// Pre-process *.html files with: (default: `liquid`)
 	htmlTemplateEngine: "njk",
@@ -165,7 +190,4 @@ export const config = {
 	// When paired with the HTML <base> plugin https://www.11ty.dev/docs/plugins/html-base/
 	// it will transform any absolute URLs in your HTML to include this
 	// folder name and does **not** affect where things go in the output folder.
-
-	InputPathToUrlTransformPluginInputPathToUrlTransformPluginpathPrefix: "/",
-};
-
+}

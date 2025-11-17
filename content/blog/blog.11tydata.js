@@ -1,6 +1,5 @@
 export default {
-	tags: [
-		"posts"
-	],
+	category: "posts",
+	tags: [ "posts" ],
 	"layout": "layouts/post.njk",
 };
