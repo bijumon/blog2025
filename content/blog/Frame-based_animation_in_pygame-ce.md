@@ -1,5 +1,6 @@
 ---
-title: ""
+title: "Frame based animation using pygame, sprite sheets"
+date: 2025-10-02
 draft: true
 ---
 

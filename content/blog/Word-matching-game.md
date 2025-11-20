@@ -1,7 +1,10 @@
 ---
-title: ""
+title: "Word matching game"
+date: 2025-09-27
+tags: [gamedev, ideas]
 draft: true
 ---
+
 
 **Lumines** is a puzzle video game series created by **Tetsuya Mizuguchi** (best known for *Rez*). It first released on the PlayStation Portable in 2004.  
 

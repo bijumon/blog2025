@@ -1,17 +1,16 @@
 ---
-title: ""
+title: "Pygame, tile maps and Tiled editor"
+date: 2025-10-01
 draft: true
----
+------
 
-Here are **10 important things you should know about tile maps and Tiled (the map editor), with Python/Pygame examples where useful**:
+## What is a Tile Map?
+A **tile map** is a 2D grid-based representation of a game world where each cell (tile) represents part of the environment (e.g., grass, water, wall). Tiles usually have a fixed size (e.g., 32x32 pixels).
 
----
+![Tilemap image](/images/timemaps1.png)
 
-### **1. What is a Tile Map?**
-- A **tile map** is a 2D grid-based representation of a game world where each cell (tile) represents part of the environment (e.g., grass, water, wall).
-- Tiles usually have a fixed size (e.g., 32x32 pixels).
+here's a tile map in Python, where `0` might represent grass, `1` represents a wall.
 
-**Example of defining a tile map in Python:**
 ```python
 tile_map = [
     [0, 0, 1, 1],
@@ -19,56 +18,52 @@ tile_map = [
     [0, 0, 0, 0]
 ]
 ```
-Here `0` might represent grass, `1` represents a wall.
 
----
+## Tiled - The Map Editor
 
-### **2. Tiled: The Map Editor**
-- **Tiled** is a popular open-source editor for designing tile-based maps.
-- It exports maps in multiple formats like **TMX (XML)** or **JSON**.
-- Tiled supports **tile layers**, **object layers**, and **custom properties** for advanced logic.
+**Tiled** is a popular open-source editor for designing tile-based maps. It exports maps in multiple formats like `TMX (XML)` or `JSON`. Tiled supports tile layers, object layers and custom properties. 
 
----
 
-### **3. Tile Size Consistency**
-- You must know the **tile width** and **tile height** used in Tiled.
-- This is essential for drawing and collision detection in Pygame.
 
-**Example constants:**
-```python
-TILE_SIZE = 32
-```
+To draw a tile map, iterate over rows and columns, draw corresponding images. `tile width` and `tile height` is used to draw and collision detect in Pygame.
 
----
+Here, we loads two tile images (grass and wall), defines a 2D list (tile_map) describing which tile goes where and loops through each row and column. `tile_width` and `tile_height` is used to calculate the correct on-screen position for every tile and draws the corresponding image onto the screen. Finally, it updates the display to show the rendered tile map.
 
-### **4. Rendering a Tile Map in Pygame**
-- To draw a tile map, iterate over rows and columns, draw corresponding images.
-
-**Snippet:**
 ```python
 import pygame
 
 pygame.init()
 screen = pygame.display.set_mode((320, 320))
 
+# Tile size
+tile_width = 32
+tile_height = 32
+
 # Load tiles
-grass = pygame.image.load("grass.png")
-wall = pygame.image.load("wall.png")
+grass = pygame.image.load("grass.png").convert_alpha()
+wall = pygame.image.load("wall.png").convert_alpha()
+
+tiles = {
+    0: grass,
+    1: wall,
+}
 
 tile_map = [
     [0, 0, 1, 1],
     [0, 1, 1, 0],
-    [0, 0, 0, 0]
+    [0, 0, 0, 0],
 ]
 
-tiles = {0: grass, 1: wall}
-
-for row in range(len(tile_map)):
-    for col in range(len(tile_map[row])):
-        tile_id = tile_map[row][col]
-        screen.blit(tiles[tile_id], (col * 32, row * 32))
+# Draw map
+for row_idx, row in enumerate(tile_map):
+    for col_idx, tile_id in enumerate(row):
+        tile_img = tiles[tile_id]
+        x = col_idx * tile_width
+        y = row_idx * tile_height
+        screen.blit(tile_img, (x, y))
 
 pygame.display.flip()
+
 ```
 
 ---

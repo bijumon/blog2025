@@ -1,5 +1,7 @@
 ---
-title: ""
+title: "Fixing filenames with spaces (in Linux)"
+date: 2025-09-29
+tags: [tips, linux]
 draft: true
 ---
 

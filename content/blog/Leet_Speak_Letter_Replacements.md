@@ -1,5 +1,6 @@
 ---
-title: ""
+title: "Easy to type words in qwerty English, l33t speak and xkcd passwords"
+date: 2025-09-28
 draft: true
 ---
 

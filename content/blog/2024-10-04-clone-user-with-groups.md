@@ -1,5 +1,5 @@
 ---
-title: tips
+title: "cloning a user's group (in Linux)"
 date: 2024-10-04
 tags: [ linux, tips ]
 ---
