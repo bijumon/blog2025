@@ -5,7 +5,7 @@ export default {
 	description: "Code, tools, and thoughts",
 	author: {
 		name: "bijumon",
-		email: "https://mastodon.art/@bijumon",
+		message: "https://mastodon.art/@bijumon",
 		url: "/about/"
 	}
 }
