@@ -31,6 +31,18 @@ hr {
     padding: 8px 0;
 }
 
+ul.content-list { list-style-type: "\2023"; /* ▶ */ }
+ul.content-list li {
+  padding-left: 0.4em;
+  margin-left: -0.4em;
+  margin-bottom: 8px;
+}
+
+.content-list a {
+  display: block;
+  text-decoration: none;
+}
+
 :root {
   --red:    #E53935;
   --orange: #FB8C00;
@@ -41,32 +53,35 @@ hr {
   --violet: #8E24AA;
 }
 
-.nav-list {
-    display: inline;
+/* rainbow cycle for .links a (and :visited) - 7 colours */
+.links a,
+.links a:visited {
+  color: var(--rain);        /* resolved per-link by nth-of-type below */
+  text-decoration: none;
+  transition: color .15s ease;
 }
 
-.content-list a {
-    display: block;
-    margin-bottom: 8px;
-    text-decoration: none;
-}
+/* assign the 7 rainbow colours using a CSS custom property */
+.links a:nth-of-type(7n+1) { --rain: red; }
+.links a:nth-of-type(7n+2) { --rain: #cc6a00; } /* darker orange */
+.links a:nth-of-type(7n+3) { --rain: #6b00a8; } /* darker violet */
+.links a:nth-of-type(7n+4) { --rain: #b3a300; } /* darker yellow */
+.links a:nth-of-type(7n+5) { --rain: indigo; }
+.links a:nth-of-type(7n+6) { --rain: green; }
+.links a:nth-of-type(7n+7) { --rain: blue; }
 
-.nav-list li:nth-child(7n + 1) a, a:visited { color: red; }
-.nav-list li:nth-child(7n + 2) a, a:visited { color: #cc6a00; } /* darker orange */
-.nav-list li:nth-child(7n + 3) a, a:visited { color: #6b00a8; } /* darker violet */
-.nav-list li:nth-child(7n + 4) a, a:visited { color: #b3a300; } /* darker yellow */
-.nav-list li:nth-child(7n + 5) a, a:visited { color: indigo; }
-.nav-list li:nth-child(7n + 6) a, a:visited { color: green; }
-.nav-list li:nth-child(7n + 7) a, a:visited { color: blue; }
+.links a:hover, .links a:focus {
+  text-decoration: underline;
+}
 
 @media (prefers-color-scheme: dark) {
-  .nav-list li:nth-child(7n + 1) a, a:visited { color: #FF5555; }
-  .nav-list li:nth-child(7n + 2) a, a:visited { color: #FFB86C; }
-  .nav-list li:nth-child(7n + 3) a, a:visited { color: #BD93F9; }
-  .nav-list li:nth-child(7n + 4) a, a:visited { color: #F1FA8C; }
-  .nav-list li:nth-child(7n + 5) a, a:visited { color: #FF79C6; }
-  .nav-list li:nth-child(7n + 6) a, a:visited { color: #50FA7B; }
-  .nav-list li:nth-child(7n + 7) a, a:visited { color: #8BE9FD; }
+  .links a:nth-of-type(7n + 1) { --rain: #FF5555; }
+  .links a:nth-of-type(7n + 2) { --rain: #FFB86C; }
+  .links a:nth-of-type(7n + 3) { --rain: #BD93F9; }
+  .links a:nth-of-type(7n + 4) { --rain: #F1FA8C; }
+  .links a:nth-of-type(7n + 5) { --rain: #FF79C6; }
+  .links a:nth-of-type(7n + 6) { --rain: #50FA7B; }
+  .links a:nth-of-type(7n + 7) { --rain: #8BE9FD; }
 
   :root {
     --text-color-link: #8BE9FD;
@@ -77,8 +92,3 @@ hr {
 }
 
 
-ul.content-list { list-style-type: "\2023"; /* ▶ */ }
-ul.content-list li {
-  padding-left: 0.4em;
-  margin-left: -0.4em;
-}
