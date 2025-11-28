@@ -53,6 +53,20 @@
 
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
+
+		<!-- Standard favicon -->
+		<link rel="icon" href="/favicon.ico" sizes="any">
+
+		<!-- Modern browsers (crisp on all DPIs) -->
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+		<!-- High-res Apple touch icon -->
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+		<!-- Optional PNG fallbacks -->
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32.png">
+		<link rel="icon" type="image/png" sizes="128x128" href="/favicons/favicon-128.png">
 	</head>
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>

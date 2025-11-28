@@ -1,5 +1,5 @@
 ---
-title: Achievements In Opus Starsong
+title: Secret Achievements In Opus Starsong
 ---
 
 ![Opus: Echo of Starsong](/images/opus_starsong1.png)

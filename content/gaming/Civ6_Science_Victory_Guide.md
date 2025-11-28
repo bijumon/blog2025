@@ -1,21 +1,10 @@
 ---
 title: Civ6 Science Victory Guide
 ---
----
 
-## user
-how to win science victory with man on the moon achievement
-## tool
+![Man on the moon](/images/science_man_moon.png)
 
-Please remember to search the user's documents if an answer to their question is not contained in the above snippets. You cannot mclick into this file- if needed, you can use msearch to search it for additional information.
-
-## assistant
-{"queries": ["How to achieve a science victory", "Man on the Moon achievement requirements"]}
-To win a Science Victory in *Civilization VI* and unlock the **"Man on the Moon"** achievement, you need to complete the second major milestone in the Space Race: **Launch the Moon Landing project**. Here's how to do it step by step:
-
----
-
-### 🎯 **Steps to Win a Science Victory (and earn the Man on the Moon achievement)**
+## Steps to Win a Science Victory (and earn the Man on the Moon achievement)
 
 #### 1. **Research Required Technologies**
    - **Rocketry**: Unlocks the **Spaceport** district.

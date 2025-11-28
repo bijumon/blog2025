@@ -5,10 +5,20 @@ pre, code {
   overflow-x: auto !important;           /* Adds horizontal scrollbar if needed */
 }
 
-
-code[class*="language-"],
 pre[class*="language-"] {
     font-family: var(--font-family-monospace) !important;
+    background-color: #fBffff;
+    border: 1px solid powderblue;
+    border-radius: 4px;
+}
+
+pre[class*="language-"] {
+    font-family: var(--font-family-monospace) !important;
+}
+
+#main picture img {
+  border-radius: 8px;
+  box-shadow: 4px 4px 6px gray;
 }
 
 @media (prefers-color-scheme: dark) {
