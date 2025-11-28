@@ -72,10 +72,10 @@ ul.content-list li {
 }
 
 /* assign the 7 rainbow colours using a CSS custom property */
-.links a:nth-of-type(7n+1) { --rain: red; }
+.links a:nth-of-type(7n+1) { --rain: #44475A; }
 .links a:nth-of-type(7n+2) { --rain: #cc6a00; } /* darker orange */
-.links a:nth-of-type(7n+3) { --rain: #6b00a8; } /* darker violet */
-.links a:nth-of-type(7n+4) { --rain: #b3a300; } /* darker yellow */
+.links a:nth-of-type(7n+3) { --rain: violet; } /* darker violet */
+.links a:nth-of-type(7n+4) { --rain: goldenrod; } /* darker yellow */
 .links a:nth-of-type(7n+5) { --rain: indigo; }
 .links a:nth-of-type(7n+6) { --rain: green; }
 .links a:nth-of-type(7n+7) { --rain: blue; }
@@ -85,7 +85,7 @@ ul.content-list li {
 }
 
 @media (prefers-color-scheme: dark) {
-  .links a:nth-of-type(7n + 1) { --rain: #FF5555; }
+  .links a:nth-of-type(7n + 1) { --rain: #F8F8F2; }
   .links a:nth-of-type(7n + 2) { --rain: #FFB86C; }
   .links a:nth-of-type(7n + 3) { --rain: #BD93F9; }
   .links a:nth-of-type(7n + 4) { --rain: #F1FA8C; }
