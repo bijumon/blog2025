@@ -18,7 +18,7 @@ const eleventyNavigation = {
 	<time class="recent_posts_date" datetime="{{ recent_post.date | htmlDateString }}">
       {{ recent_post.date | readableDate("dd LLL yyyy") }}
     </time>
-    <a href="{{ recent_post.url }}" class=recent_posts_link">
+    <a class="recent_posts_link" href="#{{ recent_post.data.title | slugify }}">
       {{ recent_post.data.title or recent_post.url }}
     </a>
   </div>
@@ -29,8 +29,32 @@ const eleventyNavigation = {
 <article reversed class="postlist">
 {%- for post in postslist | reverse %}
 	<div class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
-		<a href="{{ post.url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+		
+		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">
+			{{ post.date | readableDate("LLLL yyyy") }}
+		</time>
+
+		{# ------ TAG LIST FOR THIS POST ------ #}
+		{% if post.data.tags %}
+			<div class="post-tags">
+				{% for tag in post.data.tags %}
+					{% if tag != "posts" %} {# optional: skip your general tag #}
+						<a href="/tags/{{ tag | slugify }}/" class="post-tag">
+							{{ tag }}
+						</a>
+					{% endif %}
+				{% endfor %}
+			</div>
+		{% endif %}
+
+		<a class="postlist-link" href="{{ post.url }}" name="{{ post.data.title | slugify }}">
+			{% if post.data.title %}
+				{{ post.data.title }}
+			{% else %}
+				<code>{{ post.url }}</code>
+			{% endif %}
+		</a>
+
 		<div class="post-content">{{ post.templateContent | safe }}</div>
 	</div>
 {%- endfor %}

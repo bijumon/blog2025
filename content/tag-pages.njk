@@ -19,7 +19,20 @@ const eleventyComputed = {
 	}
 };
 ---
-<h1>Tagged “{{ tag }}”</h1>
+<p>Posts tagged “{{ tag }}” / <a href="tags.njk">all tags</a></p>
+
+<article class="recent_posts">
+{%- for recent_post in collections[ tag ] %}
+  <div class="recent_post{% if recent_post.url == url %} recent_post_active{% endif %}">
+	<time class="recent_posts_date" datetime="{{ recent_post.date | htmlDateString }}">
+      {{ recent_post.date | readableDate("dd LLL yyyy") }}
+    </time>
+    <a class="recent_posts_link" href="#{{ recent_post.data.title | slugify }}">
+      {{ recent_post.data.title or recent_post.url }}
+    </a>
+  </div>
+{%- endfor %}
+</article>
 
 {% set postslist = collections[ tag ] %}
 <article reversed class="postlist">
@@ -31,6 +44,3 @@ const eleventyComputed = {
 	</div>
 {%- endfor %}
 </article>
-
-
-<p>See <a href="tags.njk">all tags</a>.</p>
