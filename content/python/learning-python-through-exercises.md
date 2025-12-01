@@ -1,7 +1,7 @@
 ---
 title: Learning python through exercises
 date: 2025-05-01T23:15:46+05:30
-tags: [ python, learn ]
+tags: [ learn ]
 description: "using problems from exercism.com python track"
 ---
 
@@ -15,10 +15,9 @@ The objectives are simple:
 ``` python
 def hello():
     return 'Hello, World!'
-```---
-title: Currency Exchange
-date: 2025-05-09T22:19:29+05:30
----
+```
+# Currency Exchange
+
 
 ``` python
 ''' A currency exchange calculator '''
@@ -92,10 +91,8 @@ def exchangeable_value(budget, exchange_rate, spread, denomination):
     value_after_exchange = exchange_money(budget,actual_rate)
     return get_value_of_bills(denomination, get_number_of_bills(value_after_exchange,denomination))
 
-```---
-title: Grains
-date: 2025-06-27T18:27:39+05:30
----
+```
+# Grains
 
 ``` python
 """
@@ -115,10 +112,7 @@ def total():
         total_grains += square(grains)
     return total_grains
 ```
----
-title: Armstrong Numbers
-date: 2025-06-27T18:27:39+05:30
----
+# Armstrong Numbers
 
 ``` python
 """
@@ -135,10 +129,7 @@ def is_armstrong_number(number):
     return number == total
 
 ```
----
-title: Collatz Conjecture
-date: 2025-06-27T18:27:39+05:30
----
+# Collatz Conjecture
 
 ``` python
 """
@@ -159,10 +150,8 @@ def steps(number):
     return step
 
 ```
----
-title: Square Root
-date: 2025-06-27T18:28:48+05:30
----
+
+# Square Root
 
 ``` python
 def square_root(n):
@@ -189,10 +178,7 @@ def square_root(n):
     return int(guess)
 
 ```
----
-title: Ghost Gobble Arcade Game
-date: 2025-05-12T05:19:46+05:30
----
+# Ghost Gobble Arcade Game
 
 ``` python
 """Functions for implementing the rules of the classic arcade game Pac-Man."""
@@ -234,10 +220,7 @@ def win(has_eaten_all_dots, power_pellet_active, touching_ghost):
     """
     return has_eaten_all_dots and not lose(power_pellet_active,touching_ghost)
 ```
----
-title: Leap
-date: 2025-05-20T11:03:16+05:30
----
+# Leap
 
 ``` python
 def leap_year(year):
@@ -258,10 +241,7 @@ def leap_year(year):
     return year % 4 ==0 and (year % 100 !=0 or year % 400 == 0)
 
 ```
----
-title: Triangle
-date: 2025-05-20T11:03:16+05:30
----
+# Triangle
 
 ``` python
 # Let a, b, and c be sides of the triangle. Then all three of the following expressions must be true:
@@ -300,10 +280,7 @@ def scalene(sides):
 
 
 ```
----
-title: Meltdown Mitigation
-date: 2025-05-13T10:11:00+05:30
----
+# Meltdown Mitigation
 
 ``` python
 """Functions to prevent a nuclear meltdown."""
@@ -383,10 +360,8 @@ def fail_safe(temperature, neutrons_produced_per_second, threshold):
     else:
         return 'DANGER'
 
-```---
-title: Bob
-date: 2025-06-27T18:27:39+05:30
----
+```
+# Bob
 
 ``` python
 """
@@ -408,10 +383,7 @@ def response(hey_bob: str):
         return "Whatever."
 
 ```
----
-title: Raindrops
-date: 2025-05-01T22:53:09+05:30
----
+# Raindrops
 
 ``` python
 """ 
@@ -430,10 +402,9 @@ def convert(number):
     if number % 7 == 0:
         answer += raindrops[7]
     return ''.join(answer) or str(number)
-```---
-title: Pig Latin
-date: 2025-07-28T20:59:16+05:30
----
+```
+
+# Pig Latin
 
 ``` python
 """
@@ -475,10 +446,7 @@ def translate(sentence):
     return ' '.join([pig_latin(word) for word in sentence.split()])
 
 ```
----
-title: Matching Brackets
-date: 2025-07-30T11:51:33+05:30
----
+# Matching Brackets
 
 ``` python
 """
@@ -496,10 +464,7 @@ def is_paired(text: str) -> bool:
                 return False
     return not brackets
 ```
----
-title: Little Sisters Vocab
-date: 2025-05-18T14:37:31+05:30
----
+# Little Sisters Vocab
 
 ``` python
 """Functions for creating, transforming, and adding prefixes to strings."""
@@ -575,10 +540,7 @@ def adjective_to_verb(sentence, index):
     return sentence.strip('.').split()[index] + 'en'
 
 ```
----
-title: Pangram
-date: 2025-08-02T08:55:41+05:30
----
+# Pangram
 
 ``` python
 """
@@ -596,10 +558,7 @@ def is_pangram(sentence: str) -> bool:
             return False
     return True
 ```
----
-title: Isogram
-date: 2025-07-30T13:02:03+05:30
----
+# Isogram
 
 ``` python
 """
@@ -622,10 +581,7 @@ def is_isogram(text: str) -> bool:
     return len(chars) == len(set(chars))
 
 ```
----
-title: Isbn Verifier
-date: 2025-08-02T16:34:54+05:30
----
+# Isbn Verifier
 
 ``` python
 """
@@ -643,10 +599,7 @@ def is_valid(isbn: str) -> bool:
     return result % 11 == 0
 
 ```
----
-title: Rotational Cipher
-date: 2025-07-31T17:24:06+05:30
----
+# Rotational Cipher
 
 ``` python
 """
@@ -661,10 +614,7 @@ def rotate(text: str, key: int) -> str:
     return text.translate(trans_table)
 
 ```
----
-title: Black Jack
-date: 2025-05-15T05:13:57+05:30
----
+# Black Jack
 
 ``` python
 """Functions to help play and score a game of blackjack.
@@ -774,10 +724,7 @@ def can_double_down(card_one, card_two):
 
     return 9 <= points <= 11
 ```
----
-title: Perfect Numbers
-date: 2025-08-11T08:54:26+05:30
----
+# Perfect Numbers
 
 ``` python
 """
@@ -813,10 +760,7 @@ def classify(number: int) -> str:
         return "deficient"
 
 ```
----
-title: Sublist
-date: 2025-08-06T12:14:51+05:30
----
+# Sublist
 
 ``` python
 """
@@ -862,10 +806,7 @@ def sublist(A:list, B:list):
     return UNEQUAL
 
 ```
----
-title: All Your Base
-date: 2025-08-19T13:40:04+05:30
----
+# All Your Base
 
 ``` python
 def rebase(input_base: int, digits: list[int], output_base: int) -> list[int]:
@@ -908,10 +849,8 @@ def rebase(input_base: int, digits: list[int], output_base: int) -> list[int]:
         result.append(rem)
     
     return result[::-1]
-```---
-title: Little Sisters Essay
-date: 2025-05-19T11:11:44+05:30
----
+```
+# Little Sisters Essay
 
 ``` python
 """Functions to help edit essay homework using string manipulation."""
@@ -960,10 +899,7 @@ def replace_word_choice(sentence, old_word, new_word):
 
 
 ```
----
-title: Rna Transcription
-date: 2025-08-19T17:49:18+05:30
----
+# Rna Transcription
 
 ``` python
 """
@@ -983,10 +919,8 @@ def to_rna(dna_strand: str) -> str:
             case "A":
                 result.append("U")
     return "".join(result)
-```---
-title: Atbash Cipher
-date: 2025-08-22T10:03:51+05:30
----
+```
+# Atbash Cipher
 
 ``` python
 """
@@ -1012,10 +946,8 @@ def decode(ciphered_text):
     
     # Apply the Atbash mapping
     return filtered.translate(cipher_map)
-```---
-title: Wordy
-date: 2025-08-22T10:04:16+05:30
----
+```
+# Wordy
 
 ``` python
 """
@@ -1050,10 +982,8 @@ def answer(question: str) -> int:
     except:
         raise ValueError("syntax error")
 
-```---
-title: Card Games
-date: 2025-05-19T14:03:21+05:30
----
+```
+# Card Games
 
 ``` python
 import math
@@ -1145,10 +1075,7 @@ def maybe_double_last(hand):
     return hand
 
 ```
----
-title: Chaitanas Colossal Coaster
-date: 2025-05-22T11:07:39+05:30
----
+# Chaitanas Colossal Coaster
 
 ``` python
 """Functions to manage and organize queues at Chaitana's roller coaster."""
@@ -1238,10 +1165,7 @@ def sorted_names(queue):
 
 
 ```
----
-title: Making The Grade
-date: 2025-05-30T12:56:14+05:30
----
+# Making The Grade
 
 ``` python
 """Functions for organizing and calculating student exam scores."""
@@ -1338,10 +1262,7 @@ def perfect_score(student_info):
     return []
 
 ```
----
-title: Tisbury Treasure Hunt
-date: 2025-05-31T20:25:25+05:30
----
+# Tisbury Treasure Hunt
 
 ``` python
 """Functions to help Azara and Rui locate pirate treasure."""
@@ -1404,10 +1325,7 @@ def clean_up(combined_record_group):
             report += f"""('{item[0]}', '{item[2]}', {item[3]}, '{item[4]}')\n"""
     return report
 ```
----
-title: Inventory Management
-date: 2025-06-24T17:51:07+05:30
----
+# Inventory Management
 
 ``` python
 """Functions to keep track and alter inventory."""
@@ -1481,13 +1399,8 @@ def list_inventory(inventory):
         if value > 0:
             item_list.append((key,value))
     return item_list
-
-
 ```
----
-title: Cater Waiter
-date: 2025-06-24T17:58:59+05:30
----
+# Cater Waiter
 
 ``` python
 """Functions for compiling dishes and ingredients for a catering company."""
@@ -1617,10 +1530,7 @@ def singleton_ingredients(dishes, intersection):
     return singleton - intersection
 
 ```
----
-title: Ellens Alien Game
-date: 2025-06-25T21:51:08+05:30
----
+# Ellens Alien Game
 
 ``` python
 """Solution to Ellen's Alien Game exercise."""
@@ -1678,10 +1588,7 @@ def new_aliens_collection(alien_start_positions: list):
     return aliens
 
 ```
----
-title: Matrix
-date: 2025-05-04T17:26:53+05:30
----
+# Matrix
 
 ``` python
 """

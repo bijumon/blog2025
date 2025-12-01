@@ -4,6 +4,35 @@ const eleventyNavigation = {
 	order: 2
 };
 ---
+{% set recent_posts = [] %}
+{% for p in collections.all | reverse %}
+  {% if (p.data.tags and "posts" in p.data.tags) %}
+    {% set recent_posts = recent_posts.concat([ p ]) %}
+  {% endif %}
+{% endfor %}
+{% set recent_posts = recent_posts | head(19) %}
+
+<article class="recent_posts">
+{%- for recent_post in recent_posts %}
+  <div class="recent_post{% if recent_post.url == url %} recent_post_active{% endif %}">
+	<time class="recent_posts_date" datetime="{{ recent_post.date | htmlDateString }}">
+      {{ recent_post.date | readableDate("dd LLL yyyy") }}
+    </time>
+    <a href="{{ recent_post.url }}" class=recent_posts_link">
+      {{ recent_post.data.title or recent_post.url }}
+    </a>
+  </div>
+{%- endfor %}
+</article>
 
 {% set postslist = collections.posts %}
-{% include "postslist.njk" %}
+<article reversed class="postlist">
+{%- for post in postslist | reverse %}
+	<div class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+		<a href="{{ post.url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+		<div class="post-content">{{ post.templateContent | safe }}</div>
+	</div>
+{%- endfor %}
+</article>
+
