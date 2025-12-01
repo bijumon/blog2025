@@ -6,32 +6,42 @@
 
 /* Theme colors */
 :root {
-	--color-gray-20: #e0e0e0;
-	--color-gray-50: #C0C0C0;
-	--color-gray-90: #333;
+	--palladian: #EEE9DF;
+	--oatmeal: #C9C1B1;
+	--burning-flame: #FFB162;
+	--truffle-trouble: #A35139;
+	--blue-fantastic: #2C3B4D;
+	--abyssal-blue: #1B2632;
 
-	--background-color: #fff;
-
-	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
+	--black: #000000;
+	--color-gray-900: #303030;
+	--color-gray-800: #4C4C4C;
+	--color-gray-700: #6E6E6E;
+	--color-gray-600: #8D8D8D;
+	--color-gray-500: #B2B2B2;
+	--color-gray-400: #C9C9C9;
+	--color-gray-300: #E0E0E0;
+	--color-gray-200: #E9E9E9;
+	--color-gray-100: #F5F5F5;
+	--color-gray-75: #FAFAFA;
+	--white: #FFFFFF;
+	
+	--background-color: var(--palladian);
+	--text-color: var(--abyssal-blue);
+	--text-color-link: var(--truffle-trouble);
+	--text-color-link-active: var(--blue-fantastic);
+	--text-color-link-visited: var(--truffle-trouble);
 
 	--syntax-tab-size: 2;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--color-gray-20: #e0e0e0;
-		--color-gray-50: #C0C0C0;
-		--color-gray-90: #dad8d8;
-
-		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #66d9ef;
-		--text-color-link-active: #ef7c66;
-		--text-color-link-visited: #17A2B7;
-
-		--background-color: #272822;
+		--background-color: var(--abyssal-blue);
+		--text-color: var(--palladian);
+		--text-color-link: var(--oatmeal);
+		--text-color-link-active: var(--burning-flame);
+		--text-color-link-visited: var(--oatmeal);
 	}
 }
 
@@ -102,6 +112,7 @@ li {
 
 a[href] {
 	color: var(--text-color-link);
+	text-decoration: none;
 }
 a[href]:visited {
 	color: var(--text-color-link-visited);
@@ -109,6 +120,7 @@ a[href]:visited {
 a[href]:hover,
 a[href]:active {
 	color: var(--text-color-link-active);
+	text-decoration: underline;
 }
 
 main,

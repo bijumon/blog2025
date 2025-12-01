@@ -92,13 +92,6 @@ ul.content-list li {
   .links a:nth-of-type(7n + 5) { --rain: #FF79C6; }
   .links a:nth-of-type(7n + 6) { --rain: #50FA7B; }
   .links a:nth-of-type(7n + 7) { --rain: #8BE9FD; }
-
-  :root {
-    --text-color-link: #8BE9FD;
-    --text-color-link-active: #FF5555;
-    --text-color-link-visited: #BD93F9;
-    --background-color: #282A36;
-  }
 }
 
 
