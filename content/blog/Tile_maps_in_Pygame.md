@@ -7,7 +7,7 @@ draft: true
 ## What is a Tile Map?
 A **tile map** is a 2D grid-based representation of a game world where each cell (tile) represents part of the environment (e.g., grass, water, wall). Tiles usually have a fixed size (e.g., 32x32 pixels).
 
-![Tilemap image](/images/timemaps1.png)
+![Tilemap image](/images/tilemaps1.png)
 
 here's a tile map in Python, where `0` might represent grass, `1` represents a wall.
 
