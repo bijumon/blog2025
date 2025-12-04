@@ -159,6 +159,8 @@ export default async function(eleventyConfig) {
 };
 
 export const config = {
+	pathPrefix: "/blog2025/"
+
 	// Control which files Eleventy will process
 	// e.g.: *.md, *.njk, *.html, *.liquid
 	templateFormats: [
