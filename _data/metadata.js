@@ -1,6 +1,6 @@
 export default {
 	title: "@firehose",
-	url: "https://bijumon.github.io/",
+	url: "https://bijumon.github.io/blog2025/",
 	language: "en",
 	description: "Code, tools, and thoughts",
 	author: {
