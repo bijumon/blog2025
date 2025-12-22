@@ -2,7 +2,6 @@
 title: "Fixing filenames with spaces (in Linux)"
 date: 2025-09-29
 tags: [tips, linux]
-draft: true
 ---
 
 In Linux, filenames with spaces can cause issues when using the command line, as the shell interprets spaces as delimiters between arguments. Here are a few ways to handle or fix filenames with spaces:

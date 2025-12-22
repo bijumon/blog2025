@@ -1,7 +1,6 @@
 ---
 title: Metaphor Refantazio
 ---
----
 
 ## user
 in metaphor refantazio, i missed the 'A Bullish Embargo' quest in Belega Corridor 

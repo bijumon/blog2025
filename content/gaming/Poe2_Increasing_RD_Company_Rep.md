@@ -1,7 +1,6 @@
 ---
 title: Poe2 Increasing RD Company Rep
 ---
----
 
 ## user
 how can i increase reputation with royal deadfire company 

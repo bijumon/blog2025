@@ -1,7 +1,6 @@
 ---
 title: Poe2 Warrior Build
 ---
----
 
 ## user
 in pillars 2 whats a good fighter swashbuckler build in detail please

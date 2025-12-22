@@ -1,7 +1,6 @@
 ---
 title: "Pygame, tile maps and Tiled editor"
 date: 2025-10-01
-draft: true
 ------
 
 ## What is a Tile Map?

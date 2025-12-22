@@ -1,6 +1,6 @@
 ---
 title: "Optimizing shell script - cloning a users groups"
-draft: true
+date: 2020-01-01
 ---
 
 ``` shell

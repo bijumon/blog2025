@@ -1,6 +1,5 @@
 ---
 title: Civ6 Religious Victory
-draft: true
 ---
 ![Russian orthodox](/images/russian_religion.png)
 

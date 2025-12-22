@@ -1,7 +1,6 @@
 ---
 title: Poe2 Serafen Cipher Build Guide
 ---
----
 
 ## user
 in pillars deadfire, whats a good build for serafen cipher, with abilities and skills

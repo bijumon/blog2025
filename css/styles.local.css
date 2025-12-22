@@ -1,0 +1,33 @@
+
+.nav > ul {
+    list-style: none; /* Removes the default list styling */
+    padding: 0;
+}
+
+.nav > ul li {
+    display: inline; /* Makes the list items appear inline */
+    position: relative;
+}
+
+.nav > ul li::after {
+    content: "▸"; /* Adds the bullet */
+    padding: 0 4px 0 6px; /* Adds space between content and bullet */
+}
+
+.nav > ul li:last-child::after {
+    content: ""; /* Removes the bullet after the last item */
+}
+
+.posts > .post {
+    margin: 4rem 0;
+}
+
+.posts > .post {
+  margin: 4rem 0;
+}
+
+.posts > .post > .title {
+  font-size: 120%;
+  font-weight: bold;
+  text-transform: capitalize;
+}

@@ -2,7 +2,6 @@
 title: "Word matching game"
 date: 2025-09-27
 tags: [gamedev, ideas]
-draft: true
 ---
 
 

@@ -1,7 +1,6 @@
 ---
 title: "Easy to type words in qwerty English, l33t speak and xkcd passwords"
 date: 2025-09-28
-draft: true
 ---
 
 In various forms of informal writing, especially in internet slang, "leet speak" (1337 speak), and stylized text (like passwords, gamertags, or graffiti art), certain **English letters are commonly replaced with similar-looking numbers**. Here are the most typical substitutions:

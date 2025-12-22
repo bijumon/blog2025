@@ -1,7 +1,6 @@
 ---
 title: Poe2 Aloth Mage Build Guide
 ---
----
 
 ## user
 in pillars 2 whats a good MAGE ALOTH build in detail please

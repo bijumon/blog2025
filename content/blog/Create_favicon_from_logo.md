@@ -1,7 +1,6 @@
 ---
 title: "Favicons"
 date: 2025-09-30
-draft: true
 ---
 
 Favicons are typically much smaller than 1024×1024, and they often need to be in ICO format (though PNG works for modern browsers). Here’s what you should do:
